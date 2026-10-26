@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Surefire suite" verbose="1">
+
+    <!-- =========================================================
+         BLOQUE 01: Activación inicial
+         ========================================================= -->
+    <test name="01_Activacion_Inicial">
+        <classes>
+            <class name="apis_desacople.networkequipment.activations.NetworkEquipmentOntActivationsTest"/>
+        </classes>
+    </test>
+
+    <!-- =========================================================
+         BLOQUES 02-04: APIs que dependen de la ONT activa
+         ========================================================= -->
+    <test name="02_PhysicalMac">
+        <classes>
+            <class name="apis_desacople.contextualizacionont.PhysicalMacTest"/>
+        </classes>
+    </test>
+
+
+    <test name="04_FonoWin">
+        <classes>
+            <class name="apis_desacople.networkequipment.fonowin.FonoWinTest"/>
+        </classes>
+    </test>
+
+    <!-- =========================================================
+         BLOQUES 05-08: Secuencia de activación / desactivación
+         ========================================================= -->
+    <test name="05_Consulta_Por_Serial">
+        <classes>
+            <class name="apis_desacople.networkequipment.desactivation.NetworkEquipmentOntBySerialTest"/>
+        </classes>
+    </test>
+
+    <test name="06_Activacion_2">
+        <classes>
+            <class name="apis_desacople.networkequipment.activations.NetworkEquipmentOntActivationsTest"/>
+        </classes>
+    </test>
+
+    <test name="07_Desactivacion_Por_Serial">
+        <classes>
+            <class name="apis_desacople.networkequipment.OntDeactivationBySerialTest"/>
+        </classes>
+    </test>
+
+    <test name="08_Activacion_3">
+        <classes>
+            <class name="apis_desacople.networkequipment.activations.NetworkEquipmentOntActivationsTest"/>
+        </classes>
+    </test>
+
+    <!-- =========================================================
+         BLOQUE 99: Resto de las APIs (22 clases)
+         ========================================================= -->
+    <test name="99_Resto_De_Tests">
+        <classes>
+            <class name="apis_desacople.auth.KongAuthTest"/>
+            <class name="apis_desacople.bulk.ReconnectionsTest"/>
+            <class name="apis_desacople.bulk.SpeedChangesTest"/>
+            <class name="apis_desacople.bulk.SuspensionsTest"/>
+            <class name="apis_desacople.bulk.TerminationsTest"/>
+            <class name="apis_desacople.contextualizacionont.BrandInfoTest"/>
+            <class name="apis_desacople.contextualizacionont.CustomerServicesTest"/>
+            <class name="apis_desacople.contextualizacionont.ServiceStatusTest"/>
+            <class name="apis_desacople.coverage.CoverageTest"/>
+            <class name="apis_desacople.fonowin.ReservationsTest"/>
+            <class name="apis_desacople.fonowin.RollbackTest"/>
+            <class name="apis_desacople.networkequipment.brands.NetworkEquipmentOntBrandsTest"/>
+            <class name="apis_desacople.networkequipment.vas.NetworkEquipmentOntVasTest"/>
+            <class name="apis_desacople.networkprojects.ProjectsTest"/>
+            <class name="apis_desacople.networkprojects.SubProjectsTest"/>
+            <class name="apis_desacople.networksites.NetworkSiteTest"/>
+            <class name="apis_desacople.networksites.PortsTest"/>
+            <class name="apis_desacople.qualification.QualificationHorizontalTest"/>
+            <class name="apis_desacople.qualification.QualificationVerticalTest"/>
+            <class name="apis_desacople.serviceactivations.ChecklistsTest"/>
+            <class name="apis_desacople.services.OwnerChangesTest"/>
+        </classes>
+    </test>
+
+    <!-- =========================================================
+         BLOQUE 09: Activación extra antes de la desactivación final
+         Garantiza que la ONT esté activa y vigente
+         ========================================================= -->
+    <test name="09_Activacion_Previa_Desactivacion_Final">
+        <classes>
+            <class name="apis_desacople.networkequipment.activations.NetworkEquipmentOntActivationsTest"/>
+        </classes>
+    </test>
+
+    <!-- =========================================================
+         BLOQUE FINAL: OntDesactivationTest
+         ========================================================= -->
+    <test name="99_Ultimo_Desactivacion_Por_Id">
+        <classes>
+            <class name="apis_desacople.networkequipment.OntDesactivationTest"/>
+        </classes>
+    </test>
+
+</suite>

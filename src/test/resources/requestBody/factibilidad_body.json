@@ -1,0 +1,5 @@
+{
+  "latitud": "-12.084{{$randomInt}}",
+  "longitud": "-77.005{{$randomInt}}",
+  "tipoCaja": 7
+}

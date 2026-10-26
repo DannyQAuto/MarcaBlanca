@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "reactions": {
+      "type": "object",
+      "properties": {
+        "likes": {
+          "type": "integer"
+        },
+        "dislikes": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "likes",
+        "dislikes"
+      ]
+    },
+    "views": {
+      "type": "integer"
+    },
+    "userId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "body",
+    "tags",
+    "reactions",
+    "views",
+    "userId"
+  ]
+}

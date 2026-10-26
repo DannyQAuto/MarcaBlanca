@@ -1,0 +1,47 @@
+15:11:50.702 INFO  AUTOMATION - Suite iniciada: Default Suite
+15:11:51.048 DEBUG AUTOMATION - Cache cargado - Código Servicio: 1755882335162
+15:11:51.048 DEBUG AUTOMATION - Inicializando request base
+15:11:54.669 INFO  AUTOMATION - Comenzando el test: liberarMac
+15:12:05.146 DEBUG AUTOMATION - 
+=============================================
+Request
+=============================================
+(POST) 	 http://10.23.100.27/frameservice/php/index.php
+Request Headers:
+	Accept: */*
+	Content-Type: application/json
+
+Request Body:
+{
+    "method": "logserviciosnce.unauth",
+    "params": {
+        "nserie": "48575443331B55B1",
+        "ticked": "b99a20873abf2089562eea0dde99d1c2.78789008c5dfbc2b59ce3ab526666821.c7a3247008d30afd73d9cd0312083fe9"
+    }
+}
+
+=============================================
+Response
+=============================================
+Status Code: 200 	 Response Time: 8924ms
+Response Headers:
+	Server: nginx
+	Date: Tue, 26 Aug 2025 20:12:02 GMT
+	Content-Type: text/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Connection: keep-alive
+	Expires: 0
+	Cache-Control: must-revalidate
+	Pragma: public
+
+Response Body:
+{
+    "status": "-1",
+    "msg": "No se encontraron datos de ONT.",
+    "idpeticion": "68ae150c29447"
+}
+
+
+15:12:05.187 INFO  AUTOMATION - Test exitoso: liberarMac
+15:12:05.219 DEBUG AUTOMATION - Cache guardado - Código Servicio: 1755882335162
+15:12:05.245 INFO  AUTOMATION - Suite finalizada: Default Suite
